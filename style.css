@@ -2,23 +2,17 @@ body {
   background-image: url("https://t4.ftcdn.net/jpg/03/25/38/41/360_F_325384191_sg1D5lYWfRedGQsBm8xIHnsSAUUUVxGE.jpg");
   background-size: cover;
   background-color: green;
-  /* display: grid;
-  grid-template-columns: repeat(10, 4rem);
-  grid-template-rows: 7rem 2rem 7rem;
-  gap: 4rem; */
   justify-content: center;
-  padding-top: 1rem;
   color: white;
 }
 
 .card {
   display: inline-block;
   width: 100px;
-  height: 100px;
+  height: 150px;
   background: white;
   color: red;
   font-size: 30px;
-  row-gap: 10px;
   border-radius: 8px;
   border-style: outset;
   border-color: black;

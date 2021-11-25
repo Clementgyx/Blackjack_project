@@ -245,7 +245,6 @@ function resetDeck() {
   playerHand = [];
   dealerHand = [];
   deck = new Deck();
-  console.log(playerHand);
 }
 
 function startGame() {
@@ -255,12 +254,12 @@ function startGame() {
   dealerHand.push(deck.cards.shift());
   playerHand.push(deck.cards.shift());
   dealerHand.push(deck.cards.shift());
+  playerValueTotal.innerHTML = getValueInHand();
+  dealerValueTotal.innerHTML = getDealerValueInHand();
+  cardHand();
+  dealerCardHand();
   getValueInHand();
   getDealerValueInHand();
-  playerValueTotal.innerHTML = getValueInHand();
-  playerHandDisplay.append(cardHand());
-  dealerValueTotal.innerHTML = getDealerValueInHand();
-  dealerHandDisplay.append(dealerCardHand());
   if (getValueInHand() === 21) {
     document.querySelector("#game-status").innerHTML = "Blackjack! You win!";
   } else if ((getValueInHand() === 21) === getDealerValueInHand()) {
@@ -327,7 +326,7 @@ function hit() {
   console.log(deck);
   getValueInHand();
   playerValueTotal.innerHTML = getValueInHand();
-  playerHandDisplay.append(cardHand());
+  cardHand();
   if (getValueInHand() > 21) {
     document.querySelector("#game-status").innerHTML = "BUST! You lose!";
   }
@@ -351,7 +350,7 @@ function standCheck() {
     console.log(deck);
     getDealerValueInHand();
     dealerValueTotal.innerHTML = getDealerValueInHand();
-    dealerHandDisplay.append(dealerCardHand());
+    dealerCardHand();
     //If dealer hand is below 17, the code below won't run. Need to press stand to update again :/
   } else if (getDealerValueInHand() > 21) {
     document.querySelector("#game-status").innerHTML = "Dealer BUST!, You win!";
