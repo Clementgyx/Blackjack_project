@@ -321,6 +321,7 @@ function getDealerValueInHand() {
 }
 
 function hit() {
+  clearPlayerCards();
   playerHand.push(deck.cards.shift());
   console.log(playerHand);
   console.log(deck);
@@ -345,6 +346,7 @@ function stand() {
 function standCheck() {
   //check dealer hand is under 17, then draw a card
   if (getDealerValueInHand() < 17) {
+    clearDealerCards();
     dealerHand.push(deck.cards.shift());
     console.log(dealerHand);
     console.log(deck);
@@ -361,4 +363,12 @@ function standCheck() {
   } else {
     document.querySelector("#game-status").innerHTML = "You win!";
   }
+}
+
+function clearPlayerCards() {
+  playerHandDisplay.innerHTML = " ";
+}
+
+function clearDealerCards() {
+  dealerHandDisplay.innerHTML = " ";
 }

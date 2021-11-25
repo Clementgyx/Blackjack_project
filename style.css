@@ -1,7 +1,7 @@
 body {
   background-image: url("https://t4.ftcdn.net/jpg/03/25/38/41/360_F_325384191_sg1D5lYWfRedGQsBm8xIHnsSAUUUVxGE.jpg");
   background-size: cover;
-  background-color: green;
+  background-color: rgb(111, 136, 115);
   justify-content: center;
   color: white;
 }
@@ -16,6 +16,7 @@ body {
   border-radius: 8px;
   border-style: outset;
   border-color: black;
+  row-gap: 5px;
 }
 
 #dealer-cards {
@@ -44,12 +45,14 @@ body {
 }
 
 button {
-  font-size: 15px;
-  width: 100px;
-  height: 100px;
+  height: auto;
+  font-size: 20px;
+  width: 75px;
+  height: 75px;
   user-select: none;
   justify-content: center;
   align-items: center;
+  color: black;
 }
 
 .hit {
