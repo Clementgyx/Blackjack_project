@@ -16,7 +16,7 @@ Writting the code for this project was very tricky, as there were many logic sta
 
 -Allowing player to split hands
 
--Updating the player to properly reflect the currecnt hand
+-Updating the player hand to properly reflect the current hand
 
 -Player starting buy-in amount 
 
